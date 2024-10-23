@@ -10,7 +10,7 @@ class GoogleSheetService
     public function uploadToGoogleSheets($cumulativeData)
     {
 
-        $pathJsonCredentials = getenv('','app/google/credentials.json');
+        $pathJsonCredentials = getenv('GOOGLE_PATH_CREDENTIALS','app/google/credentials.json');
 
         if(!$pathJsonCredentials){
             throw new Exception("No google credentials configuration files. Please configure your .env", 1);
